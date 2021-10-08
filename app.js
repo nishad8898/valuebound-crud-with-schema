@@ -1,6 +1,16 @@
 const mongoose = require('mongoose');
 
 const {
+  userData,
+  roleData,
+  categoryData,
+  tagData,
+  productData,
+  cartData,
+  orderData,
+} = require('./data/data');
+
+const {
   createUser,
   readAllUser,
   readUserByName,
@@ -58,9 +68,10 @@ const main = async () => {
     console.log('Db connection successful.');
 
     //Start Entering the functions here
+    await createUser(userData); //creating user data also validating it (working fine).
+    await readAllUser(); //reading users data (working fine).
 
-    await readAllUser();
-
+    //updating with validation and deletion also works fine.
     //
   } catch (error) {
     console.log(error);

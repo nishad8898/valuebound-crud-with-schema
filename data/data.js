@@ -1,30 +1,69 @@
-//reference data
-const user = {
-  firstName: 'sachin',
-  lastName: 'nishad',
-  email: 'xyz@mail.com',
-  profileImage: 'profile url',
-  role: 'software engineer trainee',
-};
+const mongoose = require('mongoose');
 
-const role = {
+//reference data
+const userData = [
+  {
+    firstName: 'sachin',
+    lastName: 'nishad',
+    email: 'xyz@mail.com',
+    profileImage: 'profile url',
+    role: 'software engineer trainee',
+  },
+  {
+    firstName: 'jatin',
+    lastName: 'nishad',
+    email: 'xyz1@mail.com',
+    profileImage: 'profile url',
+    role: 'software engineer trainee',
+  },
+  {
+    firstName: 'ankit',
+    lastName: 'nishad',
+    email: 'xyz2@mail.com',
+    profileImage: 'profile url',
+    role: 'software engineer trainee',
+  },
+  {
+    firstName: 'himanshu',
+    lastName: 'nishad',
+    email: 'xyz3@mail.com',
+    profileImage: 'profile url',
+    role: 'software engineer trainee',
+  },
+  {
+    firstName: 'amit',
+    lastName: 'nishad',
+    email: 'xyz4@mail.com',
+    profileImage: 'profile url',
+    role: 'software engineer trainee',
+  },
+  {
+    firstName: 'kamlesh',
+    lastName: 'nishad',
+    email: 'xyz5@mail.com',
+    profileImage: 'profile url',
+    role: 'software engineer trainee',
+  },
+];
+
+const roleData = {
   name: 'developer',
   slug: 'developer',
 };
 
-const category = {
+const categoryData = {
   name: 'phone',
   slug: 'phone',
   image: 'phone image url',
   description: 'phone des',
 };
 
-const tag = {
+const tagData = {
   name: 'phone',
   slug: 'phone',
 };
 
-const product = {
+const productData = {
   name: 'poco x3 pro',
   thumbnail: 'thumbnail url',
   productGallery: 'poco gallery url',
@@ -35,7 +74,7 @@ const product = {
   additionalInfo: 'nothing',
 };
 
-const cart = {
+const cartData = {
   product: 'poco x3 pro',
   user: 'sachin',
   productQuantity: 1,
@@ -44,7 +83,7 @@ const cart = {
   totalPrice: 16000,
 };
 
-const order = {
+const orderData = {
   userId: new mongoose.Types.ObjectId(),
   totalItems: [{ name: 'poco' }],
   products: [{ name: 'poco x3 pro' }],
@@ -54,4 +93,14 @@ const order = {
   paymentMode: 'paytm',
   PaymentStatus: true,
   orderStatus: true,
+};
+
+module.exports = {
+  userData,
+  roleData,
+  categoryData,
+  tagData,
+  productData,
+  cartData,
+  orderData,
 };

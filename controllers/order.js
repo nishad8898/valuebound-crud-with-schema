@@ -40,20 +40,28 @@ const orderSchema = new mongoose.Schema({
     required: [true, 'shipping address'],
   },
   transactionStatus: {
-    type: Boolean,
+    type: String,
     required: [true, 'transection status'],
+    enum: ['successfull', 'unsuccessfull'],
+    lowercase: true,
   },
   paymentMode: {
     type: String,
     required: [true, 'payment mode'],
+    enum: ['paytm', 'upi', 'debit card', 'credit card', 'net banking'],
+    lowercase: true,
   },
   PaymentStatus: {
-    type: Boolean,
+    type: String,
     required: [true, 'payment status'],
+    enum: ['successfull', 'unsuccessfull'],
+    lowercase: true,
   },
   orderStatus: {
-    type: Boolean,
+    type: String,
     required: [true, 'order status'],
+    enum: ['successfull', 'unsuccessfull'],
+    lowercase: true,
   },
 });
 
